@@ -21,17 +21,3 @@ export const getAllStoreItems = async () => {
   });
   return res;
 };
-export const getRandomStoreItems = async () => {
-  const res = await API.get("items/random", {
-    headers: { "Content-Type": "application/json", Authorization: token }
-  });
-  return res;
-};
-
-export const getPopularStoreItems = async () => {
-  const res = await API.get("items/popular", {
-    headers: { "Content-Type": "application/json", Authorization: token }
-  });
-  return res;
-};
-
