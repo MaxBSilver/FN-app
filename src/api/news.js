@@ -1,22 +1,15 @@
 import API from "./api";
 import token from "./config";
 
-export const getCurrentStoreItems = async () => {
-  const res = await API.get("store/get", {
+export const getBrNews = async () => {
+  const res = await API.get("br_motd/get", {
     headers: { "Content-Type": "application/json", Authorization: token }
   });
   return res;
 };
 
-export const getUpcomingStoreItems = async () => {
-  const res = await API.get("upcoming/get", {
-    headers: { "Content-Type": "application/json", Authorization: token }
-  });
-  return res;
-};
-
-export const getAllStoreItems = async () => {
-  const res = await API.get("items/list", {
+export const getStwNews = async () => {
+  const res = await API.get("stw_motd/get", {
     headers: { "Content-Type": "application/json", Authorization: token }
   });
   return res;

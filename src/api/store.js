@@ -34,4 +34,3 @@ export const getPopularStoreItems = async () => {
   });
   return res;
 };
-
