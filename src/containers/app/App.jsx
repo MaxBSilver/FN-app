@@ -4,8 +4,6 @@ export class App extends Component {
   async componentDidMount() {
     const test1 = await getChallenges();
     console.log(test1)
-   
-
   }
 
   render() {
