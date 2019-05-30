@@ -2,6 +2,7 @@ nav {
   height: 55px;
   background-color: $navBackgroundColor;
   padding: 0 0 0 20px;
+  width: 100%;
   @include flex(flex-start, row, center);
   & img {
     width: 50px;
@@ -27,7 +28,7 @@ nav {
       }
     }
     & a:hover {
-      border-bottom: 5px solid rgb(150, 1, 209);
+      border-bottom: 5px solid #E9225F;
       background: rgba(49, 49, 49, 0.5);
       transition-property: border-bottom, background-color;
       transition-duration: 0.25s, 0.25s;

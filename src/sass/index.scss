@@ -5,6 +5,7 @@
 @import "./variables";
 @import "./mixins";
 @import "../components/nav/nav";
+@import "../containers/home/home";
 
 * {
   margin: 0;
@@ -14,4 +15,16 @@
 }
 a {
   text-decoration: none;
+}
+
+html,
+body,
+#app,
+#root,
+#app > div {
+  height: 100vh;
+}
+
+body {
+    overflow: hidden;
 }

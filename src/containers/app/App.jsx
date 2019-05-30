@@ -10,9 +10,9 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="app">
         <Nav />
-        <Route path="/" component={HomeView} />
+        <Route exact path="/" component={HomeView} />
         <Route path="/fn/news" component={NewsView} />
         <Route path="/fn/store" component={StoreView} />
         <Route path="/fn/cosmetics" component={CosmeticsView} />
