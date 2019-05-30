@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from "react";
+import { getCurrentStore } from "../../api/store";
+export class App extends Component {
+  async componentDidMount() {
+    const test = await getCurrentStore();
+    console.log(test);
+  }
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  render() {
+    return <div />;
+  }
 }
 
 export default App;
