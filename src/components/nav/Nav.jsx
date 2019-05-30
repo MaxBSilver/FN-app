@@ -1,20 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import MaterialIcon from "material-icons-react";
 export default function Nav() {
   return (
     <nav>
-      <img
-        alt="fortnite logo"
-        src="https://image.fnbr.co/logo/logo.png"
-        style={{ height: 50, width: 50 }}
-      />
-      <NavLink exact to="/">
-        Home
-      </NavLink>
-      <NavLink to="/fn/news">News</NavLink>
-      <NavLink to="/fn/cosmetics">Cosmetics</NavLink>
-      <NavLink to="/fn/store">Store</NavLink>
+      <div>
+        <img alt="fortnite logo" src="https://image.fnbr.co/logo/logo.png" />
+      </div>
+      <section>
+        <NavLink exact to="/">
+          <MaterialIcon icon="home" size="small" />
+          HOME
+        </NavLink>
+        <NavLink to="/fn/news">
+          <MaterialIcon icon="assignment" size="small" />
+          NEWS
+        </NavLink>
+        <NavLink to="/fn/cosmetics">
+          <MaterialIcon icon="people_outline" size="small" />
+          COSMETICS
+        </NavLink>
+        <NavLink to="/fn/store">
+          <MaterialIcon icon="store" size="small" />
+          STORE
+        </NavLink>
+      </section>
     </nav>
   );
 }
