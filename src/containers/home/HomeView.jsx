@@ -1,25 +1,29 @@
 import React, { Component } from "react";
-import { getBrNews } from "../../api/news";
+import { getBrNewsThunk } from "../../api/news";
+import { connect } from "react-redux";
+import Loading from "../../components/loading/Loading";
 
 export class HomeView extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      news: []
-    };
-  }
-
   async componentDidMount() {
-    const response = await getBrNews();
-    const news = response.data.data;
-    this.setState({ news });
+    await this.props.getBrNewsThunk();
   }
 
   render() {
-    const { news } = this.state;
-    return <div></div>;
+    return this.props.isLoading ? <Loading /> : <div />;
   }
 }
 
-export default HomeView;
+const mapStateToProps = state => ({
+  news: state.news,
+  isLoading: state.isLoading,
+  error: state.error
+});
+
+const mapDispatchToProps = dispatch => ({
+  getBrNewsThunk: () => dispatch(getBrNewsThunk())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeView);
