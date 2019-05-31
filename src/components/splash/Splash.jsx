@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import banner from "../../assets/banners/fn_background.jpg";
-import {Redirect} from 'react-router-dom';
+
 export class Splash extends Component {
   render() {
     return (

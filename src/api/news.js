@@ -1,4 +1,4 @@
-import fortniteAPI from "./fortniteAPI";
+import { fortniteAPI } from "./api";
 import { fortniteApiToken } from "./config";
 
 export const getBrNews = async () => {

@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export const fortniteAPI = axios.create({
   baseURL: "https://fortnite-api.theapinetwork.com/"
 });

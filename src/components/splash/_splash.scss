@@ -87,7 +87,7 @@
         border-radius: 5px;
         @include flex(center, column, center);
         color: rgb(231, 231, 231);
-
+        background: rgb(250, 0, 42) ;
         & h3 {
           align-content: center;
           font-size: 44px;
@@ -95,7 +95,7 @@
         }
       }
       & button:hover {
-        color: rgb(236, 107, 47);
+        color:rgb(250, 0, 42) ;
       }
     }
   }
