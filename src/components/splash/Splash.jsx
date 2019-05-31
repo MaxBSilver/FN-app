@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import banner from "../../assets/banners/fn_background.jpg";
-
+import {Redirect} from 'react-router-dom';
 export class Splash extends Component {
   render() {
     return (
@@ -12,9 +12,8 @@ export class Splash extends Component {
         </div>
         <section className="home-controls-cntr">
           <div className="home-info-cntr">
-            <button className="home-info">
-              <h3>CONTINUE TO <span>FORTNITEFEED</span></h3>{" "}
-              
+            <button className="home-info" onClick={() => { this.props.history.push('/home') }}>
+              <h3>CONTINUE TO <span>FORTNITEFEED</span></h3>
             </button>
           </div>
           <div>

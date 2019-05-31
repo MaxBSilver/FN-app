@@ -5,6 +5,7 @@ import Nav from "../../components/nav/Nav";
 import NewsView from "../news/NewsView";
 import StoreView from "../store/StoreView";
 import CosmeticsView from "../cosmetics/CosmeticsView";
+import HomeView from "../home/HomeView";
 export class App extends Component {
   async componentDidMount() {}
 
@@ -13,6 +14,7 @@ export class App extends Component {
       <div id="app">
         <Nav />
         <Route exact path="/" component={Splash} />
+        <Route path="/home" component={HomeView} />
         <Route path="/fn/news" component={NewsView} />
         <Route path="/fn/store" component={StoreView} />
         <Route path="/fn/cosmetics" component={CosmeticsView} />

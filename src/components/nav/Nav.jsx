@@ -8,7 +8,7 @@ export default function Nav() {
         <img alt="fortnite logo" src="https://image.fnbr.co/logo/logo.png" />
       </div>
       <section>
-        <NavLink exact to="/">
+        <NavLink to="/home">
           <MaterialIcon icon="home" size="small" />
           HOME
         </NavLink>
