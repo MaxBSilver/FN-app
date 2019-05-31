@@ -14,7 +14,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    background: rgb(223, 0, 167);
+    background: $accentColor;
     border-radius: 50%;
     animation: lds-default 1.2s linear infinite;
   }

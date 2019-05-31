@@ -1,10 +1,10 @@
-.home-view {
+.splash-view {
   height: 100%;
   margin: auto;
   display: flex;
   align-content: center;
   overflow: scroll;
-  .home-banner-cntr {
+  .splash-banner-cntr {
     width: 100%;
     position: absolute;
     background: linear-gradient(#000000, #000000);
@@ -18,7 +18,7 @@
       opacity: 0.2;
     }
   }
-  .home-controls-cntr {
+  .splash-controls-cntr {
     position: relative;
     width: 100%;
     z-index: 1;
@@ -74,7 +74,7 @@
         animation: shake 1s linear infinite;
       }
     }
-    .home-info-cntr {
+    .splash-info-cntr {
       @include flex(flex-end, column, center);
       height: 50%;
 

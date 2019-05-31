@@ -19,16 +19,16 @@ nav {
       height: 100%;
       width: 100px;
       font-size: 12px;
-      color: rgb(202, 202, 202);
+      color: $offWhiteColor;
       border-bottom: 5px solid transparent;
       transition-property: border-bottom, background-color;
       transition-duration: 0.25s, 0.25s;
       & .material-icons.md-dark {
-        color: rgb(202, 202, 202);
+        color: $offWhiteColor;
       }
     }
     & a:hover {
-      border-bottom: 5px solid #E9225F;
+      border-bottom: 5px solid $accentColor;
       background: rgba(49, 49, 49, 0.5);
       transition-property: border-bottom, background-color;
       transition-duration: 0.25s, 0.25s;
