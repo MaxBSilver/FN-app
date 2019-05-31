@@ -1,2 +1,31 @@
-@import './variables';
-@import './mixins';
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap");
+
+// SCSS imports
+@import "./variables";
+@import "./mixins";
+@import "../components/nav/nav";
+@import "../components/splash/splash";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+#app,
+#root,
+#app > div {
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+}
