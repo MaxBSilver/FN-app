@@ -3,4 +3,10 @@
   width: 100%;
   overflow: scroll;
   background: linear-gradient(175deg, $offWhiteColor 85%, $accentColor 0);
+  @include flex(space-around, null, space-around);
+  flex-wrap: wrap;
+  padding: 50px;
+  & .home-item-cntr {
+    margin-bottom: 35px;
+  }
 }

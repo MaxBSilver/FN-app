@@ -1,14 +1,38 @@
-import React from 'react'
-import moment from 'moment';
+import React from "react";
+import moment from "moment";
 export default function HomeItem(props) {
-    console.log(props)
-    console.log(props.time)
-    return (
+  const imageStyle = {
+    background: `url(${props.image})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat"
+  };
+  const hasAdd = () => {
+    console.log(props);
+    return props.meta.adSpace ? true : false;
+  };
+
+  return (
+    <div className="home-item-cntr">
+      <section className="title-container">
         <div>
-            <h1>{props.title}</h1>
-            <img alt={props.title} src={props.image}></img> 
-            <p>{props.body}</p>
-            <span>{moment(props.time).format('MM/DD/YYYY')}</span>
+          <h4 className="title-name">{props.title}</h4>
+          <h4 className="title-date">
+            {moment(props.time * 1000).format("MM/DD/YYYY")}
+          </h4>
         </div>
-    )
+        {hasAdd() ? (
+          <span>{props.meta.adSpace}</span>
+        ) : (
+          <span style={{ background: "transparent" }} />
+        )}
+      </section>
+      <article className="home-item" style={imageStyle}>
+        <section className="card-hover-cntr">
+          <div className="card-hover-background">
+            <p>{props.body}</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  );
 }

@@ -8,12 +8,14 @@
 @import "../components/splash/splash";
 @import "../components/loading/loading";
 @import "../containers/home/homeView";
+@import "../components/homeItem/homeItem";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  border: 1px lime green;
 }
 
 a {
