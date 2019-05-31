@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import HomeView from "../home/HomeView";
+import Splash from "../../components/splash/Splash";
 import Nav from "../../components/nav/Nav";
 import NewsView from "../news/NewsView";
 import StoreView from "../store/StoreView";
@@ -12,7 +12,7 @@ export class App extends Component {
     return (
       <div id="app">
         <Nav />
-        <Route exact path="/" component={HomeView} />
+        <Route exact path="/" component={Splash} />
         <Route path="/fn/news" component={NewsView} />
         <Route path="/fn/store" component={StoreView} />
         <Route path="/fn/cosmetics" component={CosmeticsView} />

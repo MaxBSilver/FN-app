@@ -5,7 +5,7 @@
 @import "./variables";
 @import "./mixins";
 @import "../components/nav/nav";
-@import "../containers/home/home";
+@import "../components/splash/splash";
 
 * {
   margin: 0;
@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
+
 a {
   text-decoration: none;
 }
@@ -26,5 +27,5 @@ body,
 }
 
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
