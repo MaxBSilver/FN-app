@@ -2,7 +2,11 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(150deg, rgb(223, 223, 223) 55%, rgb(0, 174, 255) 0);
+  background: linear-gradient(
+    150deg,
+    rgb(41, 41, 41) 55%,
+    rgb(0, 174, 255) 0
+  );
   @include flex(space-around, null, space-around);
   flex-wrap: wrap;
   padding: 10px;
@@ -41,7 +45,51 @@
   @include flex(space-around, null, null);
   & .home-controls-cntr {
     width: 50%;
-  @include flex(space-around, column, null);
+    @include flex(flex-start, column, center);
+    & a {
+      border: none;
+      width: 300px;
+      padding: 20px;
+      font-weight: bolder;
+      font-size: 24px;
+      text-align: center;
+      font-style: italic;
+      background-position: center;
+      transition-property: background, color;
+      transition-duration: 0.8s, 0.2s;
+      margin-bottom: 20px;
+    }
+    & a:hover {
+      background: rgb(235, 235, 235)
+        radial-gradient(circle, transparent 1%, rgb(235, 235, 235) 1%)
+        center/15000%;
+      cursor: pointer;
+    }
+    & a:active {
+      background-color: rgba(255, 255, 255, 0.794);
+      background-size: 100%;
+      transition: background 0s;
+    }
+    & a:focus {
+      outline: none;
+    }
+  }
+  & .cosmetics-btn {
+    color: white;
+    background-color: $accentColor;
+  }
+  & .cosmetics-btn:hover {
+    color: $accentColor;
+    background-color: white;
+  }
+  & .store-btn {
+    background-color: rgb(228, 122, 35);
+    color: white;
+
+  }
+  & .store-btn:hover {
+    color: rgb(45, 156, 91);
+    background-color: white;
 
   }
 }

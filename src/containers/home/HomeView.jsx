@@ -49,9 +49,11 @@ export class HomeView extends Component {
             />
           </section>
           <section className="home-controls-cntr">
-            <NavLink>max</NavLink>
-            <NavLink>max</NavLink>
-            <NavLink>max</NavLink>
+            <NavLink to="/fn/store" className="store-btn">Checkout the Store!</NavLink>
+            <NavLink to="/fn/cosmetics"  className="cosmetics-btn">
+              View all Cosmetic items!
+            </NavLink>
+            {/* <NavLink>max</NavLink> */}
           </section>
         </div>
 
