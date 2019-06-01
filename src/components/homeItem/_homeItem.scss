@@ -1,6 +1,3 @@
-.home-item-cntr {
-}
-
 .title-container {
   width: 100%;
   height: 40px;
@@ -38,13 +35,13 @@
     );
   }
 }
+
 .home-item {
   width: 346px;
   height: 176px;
   & img {
     width: 346px;
   }
-
   & .card-hover-cntr {
     height: 100%;
     position: relative;
