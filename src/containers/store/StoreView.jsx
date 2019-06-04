@@ -6,7 +6,7 @@ import StoreItem from "../../components/storeItem/StoreItem";
 import Loading from "../../components/loading/Loading";
 export class StoreView extends Component {
   async componentDidMount() {
-    await this.props.getCurrentStoreItemsThunk();
+    if(this.props.storeItems.length === 0) await this.props.getCurrentStoreItemsThunk();
   }
   render() {
     const storeItems = this.props.storeItems.map(storeItem => (

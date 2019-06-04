@@ -17,3 +17,9 @@ export const setStore = storeItems => ({
   type: "SET_STORE_ITEMS",
   storeItems
 });
+
+export const setCosmeticItems = cosmeticItems => ({
+  type: "SET_COSMETIC_ITEMS",
+  cosmeticItems
+});
+

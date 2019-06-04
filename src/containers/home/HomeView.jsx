@@ -7,7 +7,7 @@ import YouTube from "react-youtube";
 import { NavLink } from "react-router-dom";
 export class HomeView extends Component {
   async componentDidMount() {
-    await this.props.getBrNewsThunk();
+    if(this.props.news.length === 0) await this.props.getBrNewsThunk();
   }
   loopVideo(event) {
     event.target.playVideo();
