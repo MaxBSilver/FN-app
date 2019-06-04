@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getCurrentStoreItemsThunk } from "../../api/store";
-
+import moment from "moment";
 import { connect } from "react-redux";
 import StoreItem from "../../components/storeItem/StoreItem";
 export class StoreView extends Component {
@@ -14,8 +14,15 @@ export class StoreView extends Component {
 
     return (
       <div className="store-container">
-        <h2>Store Items</h2>
-        <p>Store Items info here</p>
+        <div>
+          <h2>
+            Store<span>{moment().format("MMM Do YY")  }</span>
+          </h2>
+          <p>
+            The current item shop rotation for Fortnite Battle Royale - updates
+            daily at <span>00:00 UTC</span> .
+          </p>
+        </div>
         <section className="store-item-container">{storeItems}</section>
       </div>
     );

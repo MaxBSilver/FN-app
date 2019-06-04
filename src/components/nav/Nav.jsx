@@ -12,10 +12,6 @@ export default function Nav() {
           <MaterialIcon icon="home" size="small" />
           HOME
         </NavLink>
-        <NavLink to="/fn/news">
-          <MaterialIcon icon="assignment" size="small" />
-          NEWS
-        </NavLink>
         <NavLink to="/fn/cosmetics">
           <MaterialIcon icon="people_outline" size="small" />
           COSMETICS

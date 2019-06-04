@@ -2,9 +2,35 @@
   overflow: scroll;
   height: 100%;
   width: 100%;
+  background: rgb(44, 43, 43);
+
+  & div {
+    padding: 20px 50px;
+    & h2 {
+        height: 100%;
+      color: white;
+      font-weight: 400;
+      font-size: 45px;
+      margin-bottom: 10px;
+      & span {
+        color: white;
+        font-weight: 200;
+        font-size: 30px;
+        padding: 8px;
+        border-radius: 2px;
+        background-color:  rgb(54, 54, 54);
+        margin-left: 20px;
+      }
+    }
+    & p {
+      color: rgb(230, 230, 230);
+      & span {
+        color: rgb(235, 235, 74);
+      }
+    }
+  }
 }
 .store-item-container {
-
   @include flex(center, null, center);
   flex-wrap: wrap;
   padding: 20px;
