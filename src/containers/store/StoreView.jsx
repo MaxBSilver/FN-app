@@ -3,6 +3,7 @@ import { getCurrentStoreItemsThunk } from "../../api/store";
 import moment from "moment";
 import { connect } from "react-redux";
 import StoreItem from "../../components/storeItem/StoreItem";
+import Loading from "../../components/loading/Loading";
 export class StoreView extends Component {
   async componentDidMount() {
     await this.props.getCurrentStoreItemsThunk();
@@ -11,18 +12,21 @@ export class StoreView extends Component {
     const storeItems = this.props.storeItems.map(storeItem => (
       <StoreItem key={storeItem.itemId} {...storeItem} />
     ));
-
-    return (
+    return this.props.isLoading ? (
       <div className="store-container">
-        <div>
+        <Loading />
+      </div>
+    ) : (
+      <div className="store-container">
+        <section className="store-info-container">
           <h2>
-            Store<span>{moment().format("MMM Do YY")  }</span>
+            Store<span>{moment().format("MMM Do YY")}</span>
           </h2>
           <p>
             The current item shop rotation for Fortnite Battle Royale - updates
             daily at <span>00:00 UTC</span> .
           </p>
-        </div>
+        </section>
         <section className="store-item-container">{storeItems}</section>
       </div>
     );

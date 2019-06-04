@@ -1,13 +1,10 @@
 .store-container {
   overflow: scroll;
-  height: 100%;
-  width: 100%;
   background: rgb(44, 43, 43);
-
-  & div {
-    padding: 20px 50px;
+  & section.store-info-container {
+    padding: 20px 20px;
     & h2 {
-        height: 100%;
+      height: 100%;
       color: white;
       font-weight: 400;
       font-size: 45px;
@@ -18,7 +15,7 @@
         font-size: 30px;
         padding: 8px;
         border-radius: 2px;
-        background-color:  rgb(54, 54, 54);
+        background-color: rgb(54, 54, 54);
         margin-left: 20px;
       }
     }
@@ -35,4 +32,5 @@
   flex-wrap: wrap;
   padding: 20px;
   padding-bottom: 70px;
+  overflow: scroll;
 }
