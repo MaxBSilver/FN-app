@@ -1,0 +1,12 @@
+.store-container {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+.store-item-container {
+
+  @include flex(center, null, center);
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-bottom: 70px;
+}

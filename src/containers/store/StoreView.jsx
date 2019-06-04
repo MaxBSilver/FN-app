@@ -12,7 +12,13 @@ export class StoreView extends Component {
       <StoreItem key={storeItem.itemId} {...storeItem} />
     ));
 
-    return <div>{storeItems}</div>;
+    return (
+      <div className="store-container">
+        <h2>Store Items</h2>
+        <p>Store Items info here</p>
+        <section className="store-item-container">{storeItems}</section>
+      </div>
+    );
   }
 }
 
