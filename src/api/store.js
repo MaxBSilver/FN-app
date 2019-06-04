@@ -1,4 +1,4 @@
-import {fortniteAPI }from "./api";
+import { fortniteAPI } from "./api";
 import { fortniteApiToken } from "./config";
 import { isLoading, hasErrored, setStore } from "../actions";
 
@@ -6,7 +6,7 @@ export const getCurrentStoreItems = async () => {
   const res = await fortniteAPI.get("store/get", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: { fortniteApiToken }
+      Authorization:  fortniteApiToken 
     }
   });
   return res;

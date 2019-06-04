@@ -13,7 +13,7 @@ export const setNews = news => ({
   news
 });
 
-export const setStore = store => ({
-  type: "SET_STORE",
-  store
+export const setStore = storeItems => ({
+  type: "SET_STORE_ITEMS",
+  storeItems
 });

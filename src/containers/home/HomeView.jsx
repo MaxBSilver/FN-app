@@ -42,11 +42,11 @@ export class HomeView extends Component {
         <div className="home-top">
           <section className="home-video-cntr">
             <div className="video-mask" />
-            <YouTube
+            {/* <YouTube
               videoId="n4YkqKCp2DQ"
               opts={opts}
               style={{ backgroundColor: "white" }}
-            />
+            /> */}
           </section>
           <section className="home-controls-cntr">
             <NavLink to="/fn/cosmetics" className="cosmetics-btn">
