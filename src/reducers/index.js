@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
-import { isLoading, hasErrored, news } from "./newsReducer";
+import { news } from "./newsReducer";
+import { isLoading } from "./loadingReducer";
+import { error } from "./errorReducer";
 
 const rootReducer = combineReducers({
   news,
   isLoading,
-  error: hasErrored
+  error
 });
 
 export default rootReducer;

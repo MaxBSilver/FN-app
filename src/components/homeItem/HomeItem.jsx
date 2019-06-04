@@ -7,7 +7,6 @@ export default function HomeItem(props) {
     backgroundRepeat: "no-repeat"
   };
   const hasAdd = () => {
-    console.log(props);
     return props.meta.adSpace ? true : false;
   };
 
