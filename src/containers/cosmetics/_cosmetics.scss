@@ -1,0 +1,90 @@
+.cosmetics-container {
+  height: 100%;
+  overflow: scroll;
+  background: rgb(44, 43, 43);
+  padding: 20px 20px;
+
+  & h2 {
+      color: white;
+      font-weight: 400;
+      font-size: 45px;
+      margin-bottom: 10px;
+  }
+  & .control-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 50px;
+  }
+  & button {
+    color: rgb(231, 231, 231);
+    height: 80px;
+    min-width: 270px;
+    border: none;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+    background-position: center;
+    transition-property: background, color;
+    transition-duration: 0.8s, 0.2s;
+  }
+  & button:hover {
+    background: rgb(235, 235, 235)
+      radial-gradient(circle, transparent 1%, rgb(235, 235, 235) 1%)
+      center/15000%;
+    cursor: pointer;
+  }
+  & button:active {
+    background-color: rgba(255, 255, 255, 0.794);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  & button:focus {
+    outline: none;
+  }
+
+  & .gliders-btn {
+    background-color: rgb(216, 0, 180);
+  }
+  & .gliders-btn:hover {
+    color: rgb(216, 0, 180);
+    animation: shake 1s linear infinite;
+  }
+  & .pickaxes-btn {
+    background-color: rgb(216, 140, 0);
+  }
+  & .pickaxes-btn:hover {
+    color:  rgb(216, 140, 0);;
+    animation: shake 1s linear infinite;
+  }
+
+  & .outfits-btn {
+    background-color: rgb(52, 180, 231);
+  }
+  & .outfits-btn:hover {
+    color: rgb(52, 180, 231);
+    animation: shake 1s linear infinite;
+  }
+}
+.cosmetic-item-container {
+  overflow: scroll;
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    padding-bottom: 51px;
+  
+  }
+}
+
+.cosmetic-card {
+  margin: 10px;
+  & img {
+    height: 200px;
+    width: 200px;
+  }
+}
