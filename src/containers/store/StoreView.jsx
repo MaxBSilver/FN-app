@@ -45,7 +45,7 @@ export const mapDispatchToProps = dispatch => ({
   getCurrentStoreItemsThunk: () => dispatch(getCurrentStoreItemsThunk())
 });
 
-PropTypes = StoreView.propTypes = {
+ StoreView.propTypes = {
   storeItems: PropTypes.array,
   getCurrentStoreItemsThunk: PropTypes.func,
   isLoading: PropTypes.bool
