@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import banner from "../../assets/banners/fn_background.jpg";
-import PropTypes from 'prop-types';
+import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 export class Splash extends Component {
   render() {
     return (
@@ -12,9 +13,11 @@ export class Splash extends Component {
         </div>
         <section className="splash-controls-cntr">
           <div className="splash-info-cntr">
-            <button className="splash-info" onClick={() => { this.props.history.push('/fn/home') }}>
-              <h3>CONTINUE TO <span>FORTNITEFEED</span></h3>
-            </button>
+            <NavLink to="/fn/home">
+              <h3>
+                CONTINUE TO <span>FORTNITEFEED</span>
+              </h3>
+            </NavLink>
           </div>
           <div>
             <button className="play-now-btn">PLAY FREE NOW</button>
@@ -27,6 +30,6 @@ export class Splash extends Component {
 }
 Splash.propTypes = {
   history: PropTypes.object
-}
+};
 
 export default Splash;

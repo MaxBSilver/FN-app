@@ -57,9 +57,6 @@ export class HomeView extends Component {
             <NavLink to="/fn/store" className="store-btn">
               Checkout the Store!
             </NavLink>
-            <NavLink className="search-users-btn" to="/fn/users">
-              Search Users!
-            </NavLink>
           </section>
         </div>
         <div className="home-bottom">

@@ -2,7 +2,7 @@ import { getCurrentStoreItems } from "../store";
 import { fortniteApiToken } from "../config";
 import { fortniteApi } from "../api";
 import MockAdapter from "axios-mock-adapter";
-import { hasErrored, isLoading, setStore } from "../../actions/index";
+import { isLoading } from "../../actions/index";
 
 describe("getCurrentStoreItems", () => {
   const mockStore = [{ item: 1 }, { item: 2 }];
