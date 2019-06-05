@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 export default function StoreItem(props) {
   return (
     <article className="store-item">
@@ -7,3 +7,7 @@ export default function StoreItem(props) {
     </article>
   );
 }
+
+StoreItem.propTypes = {
+  item: PropTypes.object
+};
