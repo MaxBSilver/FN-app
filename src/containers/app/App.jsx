@@ -9,6 +9,7 @@ import Error from "../../components/error/Error";
 import RequestError from "../../components/requestError/RequestError";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
 export class App extends Component {
   async componentDidMount() {}
   render() {
@@ -30,14 +31,12 @@ export class App extends Component {
           }
         />
         <Route
-          exact
           path="/fn/store"
           render={() =>
             error !== "" ? <Redirect to="/fn/error" /> : <StoreView />
           }
         />
         <Route
-          exact
           path="/fn/cosmetics"
           render={() =>
             error !== "" ? <Redirect to="/fn/error" /> : <CosmeticsView />
