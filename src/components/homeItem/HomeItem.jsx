@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import PropTypes from "prop-types";
 export default function HomeItem(props) {
   const imageStyle = {
     background: `url(${props.image})`,
@@ -34,3 +35,11 @@ export default function HomeItem(props) {
     </div>
   );
 }
+
+HomeItem.propTypes = {
+  body: PropTypes.string,
+  image: PropTypes.string,
+  meta: PropTypes.object,
+  time: PropTypes.number,
+  title: PropTypes.string
+};
