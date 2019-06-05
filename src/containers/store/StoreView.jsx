@@ -4,7 +4,7 @@ import moment from "moment";
 import { connect } from "react-redux";
 import StoreItem from "../../components/storeItem/StoreItem";
 import Loading from "../../components/loading/Loading";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 export class StoreView extends Component {
   async componentDidMount() {
     if (this.props.storeItems.length === 0)
@@ -46,9 +46,10 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 PropTypes = StoreView.propTypes = {
-  storeItems : PropTypes.array,
-
-}
+  storeItems: PropTypes.array,
+  getCurrentStoreItemsThunk: PropTypes.func,
+  isLoading: PropTypes.bool
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps
