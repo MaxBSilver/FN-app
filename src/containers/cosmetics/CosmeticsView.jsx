@@ -32,7 +32,6 @@ export class CosmeticsView extends Component {
   };
 
   render() {
-      console.log(this.props)
     return (
       <section className="cosmetics-container">
         {!this.props.isLoading && (
