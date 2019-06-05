@@ -28,4 +28,23 @@ describe("actions", () => {
     const result = actions.setNews(news);
     expect(result).toEqual(expectedAction);
   });
+  it("should have a type SET_STORE_ITEMS", () => {
+    const storeItem = ["myItem"];
+    const expectedAction = {
+        type: "SET_STORE_ITEMS",
+        storeItems: ["myItem"]
+    }
+    const result = actions.setStore(storeItem);
+    expect(result).toEqual(expectedAction);
+  });
+  it("should have a type SET_COSMETIC_ITEMS", () => {
+    const cosmeticItems = ["cosmeticItem"];
+    const expectedAction = {
+        type: "SET_COSMETIC_ITEMS",
+        cosmeticItems: ["cosmeticItem"]
+    }
+    const result = actions.setCosmeticItems(cosmeticItems);
+    expect(result).toEqual(expectedAction);
+  });
+  
 });

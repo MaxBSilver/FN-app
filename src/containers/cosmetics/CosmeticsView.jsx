@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getAllCosmeticsThunk } from "../../api/cosmetics";
 import CosmeticItemContainer from "../../components/cosmeticItemContainer/CosmeticItemContainer";
-
+import Loading from "../../components/loading/Loading";
+import PropTypes from 'prop-types';
 export class CosmeticsView extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,7 @@ export class CosmeticsView extends Component {
   render() {
     return (
       <section className="cosmetics-container">
-        {!this.props.loading && (
+        {!this.props.isLoading && (
           <React.Fragment>
             <h2>Cosmetics</h2>
             <div className="control-container">
@@ -54,9 +55,11 @@ export class CosmeticsView extends Component {
             </section>
           </React.Fragment>
         )}
+        {this.props.isLoading && <Loading/>}
       </section>
     );
   }
+  
 }
 
 export const mapStateToProps = state => ({
@@ -68,7 +71,17 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   getAllCosmeticsThunk: () => dispatch(getAllCosmeticsThunk())
 });
+CosmeticsView.propTypes = {
+    cosmeticItems : PropTypes.array,
+    error: PropTypes.string,
+    getAllCosmeticsThunk: PropTypes.func,
+    isLoading: PropTypes.bool
+}
+
+
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CosmeticsView);
+

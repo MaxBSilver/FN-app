@@ -5,14 +5,16 @@ import Loading from "../../components/loading/Loading";
 import HomeItem from "../../components/homeItem/HomeItem";
 import YouTube from "react-youtube";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 export class HomeView extends Component {
   async componentDidMount() {
-    if(this.props.news.length === 0) await this.props.getBrNewsThunk();
+    if (this.props.news.length === 0) await this.props.getBrNewsThunk();
   }
   loopVideo(event) {
     event.target.playVideo();
   }
   render() {
+
     const opts = {
       width: "800",
       height: "450",
@@ -80,6 +82,12 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   getBrNewsThunk: () => dispatch(getBrNewsThunk())
 });
+HomeView.propTypes = {
+  error: PropTypes.string,
+  getBrNewsThunk: PropTypes.func,
+  isLoading: PropTypes.bool,
+  news: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default connect(
   mapStateToProps,

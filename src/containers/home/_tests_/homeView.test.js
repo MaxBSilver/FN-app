@@ -1,7 +1,18 @@
-import { mapStateToProps, mapDispatchToProps, HomeViews } from "../HomeView";
+import { mapStateToProps,  HomeView } from "../HomeView";
+import React from "react";
 
+import { shallow } from "enzyme";
 describe("HomeView", () => {
-  describe("HomeView Component", () => {});
+  describe("HomeView Component", () => {
+    let wrapper;
+    beforeEach(() => {
+      const mockProps = { news: [{ itemId: 1, title: "max" }] };
+      wrapper = shallow(<HomeView {...mockProps} />);
+    });
+    it("should match snapshot", () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
   describe("mapStateToProps", () => {
     it("should return an object with the news array", () => {
       const mockState = {

@@ -28,13 +28,3 @@ export const getBrNewsThunk = () => {
   };
 };
 
-export const getStwNews = async () => {
-  const res = await fortniteAPI.get("stw_motd/get", {
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: fortniteApiToken
-    }
-  });
-  return res;
-};
-

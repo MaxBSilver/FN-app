@@ -1,12 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Splash from "../Splash";
+import Error from "../Error";
 
-describe("Splash", () => {
+describe("CosmeticItemContainer", () => {
   let wrapper;
 
   beforeEach(() => {
-wrapper = shallow(<Splash />);
+wrapper = shallow(<Error />);
   });
 
   it("should match snapshot", () => {
