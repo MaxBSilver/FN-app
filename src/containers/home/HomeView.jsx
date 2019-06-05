@@ -14,7 +14,6 @@ export class HomeView extends Component {
     event.target.playVideo();
   }
   render() {
-    console.log(this.props);
 
     const opts = {
       width: "800",

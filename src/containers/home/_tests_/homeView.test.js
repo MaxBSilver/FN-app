@@ -1,4 +1,4 @@
-import { mapStateToProps, mapDispatchToProps, HomeView } from "../HomeView";
+import { mapStateToProps,  HomeView } from "../HomeView";
 import React from "react";
 
 import { shallow } from "enzyme";
