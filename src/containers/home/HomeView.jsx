@@ -7,7 +7,7 @@ import YouTube from "react-youtube";
 import { NavLink } from "react-router-dom";
 export class HomeView extends Component {
   async componentDidMount() {
-    if(this.props.news.length === 0) await this.props.getBrNewsThunk();
+    if (this.props.news.length === 0) await this.props.getBrNewsThunk();
   }
   loopVideo(event) {
     event.target.playVideo();
@@ -34,7 +34,7 @@ export class HomeView extends Component {
     ));
 
     return this.props.isLoading ? (
-    <section className="home-view-cntr">
+      <section className="home-view-cntr">
         <Loading />
       </section>
     ) : (
