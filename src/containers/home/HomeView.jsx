@@ -34,7 +34,7 @@ export class HomeView extends Component {
     ));
 
     return this.props.isLoading ? (
-      <section className="home-view-cntr">
+    <section className="home-view-cntr">
         <Loading />
       </section>
     ) : (

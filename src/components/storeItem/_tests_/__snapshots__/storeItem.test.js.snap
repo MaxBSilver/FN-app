@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CosmeticItemContainer should match snapshot 1`] = `undefined`;
+
+exports[`StoreItem should match snapshot 1`] = `ShallowWrapper {}`;

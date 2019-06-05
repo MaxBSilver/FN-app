@@ -9,7 +9,6 @@ export default function HomeItem(props) {
   const hasAdd = () => {
     return props.meta.adSpace ? true : false;
   };
-
   return (
     <div className="home-item-cntr">
       <section className="title-container">

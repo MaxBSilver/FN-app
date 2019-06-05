@@ -1,13 +1,12 @@
 import React from "react";
-import { CosmeticsView } from "../CosmeticsView";
-
 import { shallow } from "enzyme";
+import Loading from "../Loading";
 
-describe("CosmeticsView", () => {
+describe("Loading", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<CosmeticsView />);
+wrapper = shallow(<Loading />);
   });
 
   it("should match snapshot", () => {
