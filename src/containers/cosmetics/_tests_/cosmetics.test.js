@@ -38,8 +38,10 @@ describe("CosmeticsView", () => {
         expect(wrapper.instance().selectDisplay).toHaveBeenCalled();
       });
       describe("selectDisplay", () => {
-        const mockCosmeticItems = [{ item: { type: "pickaxe" } }, { item: { type: "glider" } }];
-
+        const mockCosmeticItems = [
+          { item: { type: "pickaxe" } },
+          { item: { type: "glider" } }
+        ];
         wrapper = shallow(
           <CosmeticsView
             getAllCosmeticsThunk={mockGetAllCosmeticsThunk}
@@ -47,8 +49,29 @@ describe("CosmeticsView", () => {
           />
         );
         it("should setState with an item with a type equivalent to the filter", () => {
-          wrapper.instance().selectDisplay('pickaxe')
-          expect(wrapper.instance().state).toEqual({displayItems: [{ item: { type: "pickaxe" } }], filter: 'pickaxe'})        });
+          wrapper.instance().selectDisplay("pickaxe");
+          setTimeout(() => {
+            expect(wrapper.instance().state).toEqual(
+              {
+                displayItems: [{ item: { type: "pickaxe" } }],
+                filter: "pickaxe"
+              },
+              500
+            );
+          });
+        });
+        it("should not setState with an item with a whose type is not equivalent to the filter", () => {
+          wrapper.instance().selectDisplay("outfit");
+          setTimeout(() => {
+            expect(wrapper.instance().state).toEqual(
+              {
+                displayItems: [{ item: { type: "pickaxe" } }],
+                filter: "outfit"
+              },
+              500
+            );
+          });
+        });
       });
     });
   });

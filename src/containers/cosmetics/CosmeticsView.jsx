@@ -20,7 +20,6 @@ export class CosmeticsView extends Component {
 
   selectDisplay = filter => {
     const { cosmeticItems } = this.props;
-    console.log(this.props)
     const displayItems = cosmeticItems.filter(
       cosmetic => cosmetic.item.type === filter
     );

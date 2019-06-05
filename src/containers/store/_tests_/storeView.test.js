@@ -5,12 +5,31 @@ import { shallow } from "enzyme";
 describe("StoreView", () => {
   describe("StoreView Component", () => {
     let wrapper;
+    let mockGetCurrentStoreItemsThunk;
     beforeEach(() => {
+      mockGetCurrentStoreItemsThunk = jest.fn();
       const mockProps = { storeItems: [{ itemId: 1 }] };
-      wrapper = shallow(<StoreView {...mockProps} />);
+      wrapper = shallow(
+        <StoreView
+          {...mockProps}
+          getCurrentStoreItemsThunk={mockGetCurrentStoreItemsThunk}
+        />
+      );
     });
     it("should match snapshot", () => {
       expect(wrapper).toMatchSnapshot();
+    });
+    it("should invoke getAllCosmeticsThunk when component mounts", async () => {
+      const mockProps = { storeItems: [] };
+
+      wrapper = shallow(
+        <StoreView
+          {...mockProps}
+          getCurrentStoreItemsThunk={mockGetCurrentStoreItemsThunk}
+        />
+      );
+      await wrapper.instance().componentDidMount();
+      expect(mockGetCurrentStoreItemsThunk).toHaveBeenCalled();
     });
   });
   describe("mapStateToProps", () => {
