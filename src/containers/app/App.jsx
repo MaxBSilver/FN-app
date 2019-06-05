@@ -14,7 +14,7 @@ export class App extends Component {
       <div id="app">
         <Nav />
         <Route exact path="/" component={Splash} />
-        <Route path="/home" component={HomeView} />
+        <Route path="/fn/home" component={HomeView} />
         <Route path="/fn/news" component={NewsView} />
         <Route path="/fn/store" component={StoreView} />
         <Route path="/fn/cosmetics" component={CosmeticsView} />
