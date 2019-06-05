@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getAllCosmeticsThunk } from "../../api/cosmetics";
 import CosmeticItemContainer from "../../components/cosmeticItemContainer/CosmeticItemContainer";
+import Loading from "../../components/loading/Loading";
 
 export class CosmeticsView extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export class CosmeticsView extends Component {
   render() {
     return (
       <section className="cosmetics-container">
-        {!this.props.loading && (
+        {!this.props.isLoading && (
           <React.Fragment>
             <h2>Cosmetics</h2>
             <div className="control-container">
@@ -54,6 +55,7 @@ export class CosmeticsView extends Component {
             </section>
           </React.Fragment>
         )}
+        {this.props.isLoading && <Loading/>}
       </section>
     );
   }
