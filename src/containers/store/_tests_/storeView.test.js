@@ -1,4 +1,4 @@
-import { mapStateToProps, mapDispatchToProps, StoreView } from "../StoreView";
+import { mapStateToProps, StoreView } from "../StoreView";
 import React from "react";
 
 import { shallow } from "enzyme";

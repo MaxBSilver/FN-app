@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import banner from "../../assets/banners/fn_background.jpg";
-
+import PropTypes from 'prop-types';
 export class Splash extends Component {
   render() {
     return (
@@ -24,6 +24,9 @@ export class Splash extends Component {
       </section>
     );
   }
+}
+Splash.propTypes = {
+  history: PropTypes.object
 }
 
 export default Splash;

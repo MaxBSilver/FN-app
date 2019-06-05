@@ -18,7 +18,7 @@ export class CosmeticsView extends Component {
     this.setState({ displayItems: this.props.cosmeticItems });
   }
 
-  selectDisplay = filter => {
+  selectDisplay = (filter) => {
     const { cosmeticItems } = this.props;
     const displayItems = cosmeticItems.filter(
       cosmetic => cosmetic.item.type === filter

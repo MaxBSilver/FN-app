@@ -8,6 +8,7 @@ import HomeView from "../home/HomeView";
 import Error from "../../components/error/Error";
 import RequestError from "../../components/requestError/RequestError";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 export class App extends Component {
   async componentDidMount() {}
   render() {
@@ -53,4 +54,7 @@ export const mapStateToProps = state => ({
   error: state.error
 });
 
+App.propTypes = {
+  error: PropTypes.string
+};
 export default connect(mapStateToProps)(App);
